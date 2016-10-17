@@ -1,0 +1,17 @@
+{
+	"profile":{
+		"email":"devazbn@yandex.ru",
+		"address":"Орел, ул. Андрианова, д. 1",
+		"phone":"+7 (4862) 49-53-53",
+		"tel":"+74862495353",
+		"faxTel":"+74862495351",
+		"fax":"+7 (4862) 49-53-51",
+		"name":"Кластер ГЛОНАСС"
+	},
+	"image":{
+		"400x400":"https://placeholdit.imgix.net/~text?txtsize=30&txt=400x400&w=400&h=400"
+	},
+	"content":{
+
+	}
+}

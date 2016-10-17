@@ -1,0 +1,82 @@
+.docs-block{
+	padding-top: 25px;
+}
+.docs-block__row{
+	flex-wrap: wrap;
+}
+.docs-block__cols{
+	width: 25%;
+	@media @media-size-xs-p{width: 100%}
+	@media @media-size-xs-l{width: 50%}
+	@media @media-size-sm-p{width: 33.3333%}
+	@media @media-size-lg{width: 33.3333%}
+	@media @media-size-xl1{width: 33.3333%}
+}
+.docs-item{
+	position: relative;
+	padding-left: 60px; 
+	min-height: 50px;
+	font-size: @b-fs - 2px; //16px
+	line-height: @b-lh - 6px; // 22px
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	a{
+		color: @black;
+		border-bottom: 1px solid;
+		transition: @transition-site;
+		&:hover{
+			border-color: fadeout(@red, 100%);
+		}
+		&:before{
+			font-family: @icon;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			font-size: 50px;
+			line-height: 50px;
+		}
+		&[href$=".pdf"]:before,
+		&[href$=".PDF"]:before,
+		&[href$=".djvu"]:before,
+		&[href$=".DJVU"]:before{content: @icon-pdf; color: @color-pdf} 
+		&[href$=".doc"]:before,
+		&[href$=".DOC"]:before,
+		&[href$=".rtf"]:before,
+		&[href$=".RTF"]:before,
+		&[href$=".odt"]:before,
+		&[href$=".ODT"]:before,
+		&[href$=".docx"]:before,
+		&[href$=".DOCX"]:before{content: @icon-doc; color: @color-doc} 
+		&[href$=".xls"]:before,
+		&[href$=".XLS"]:before,
+		&[href$=".ods"]:before,
+		&[href$=".ODS"]:before,
+		&[href$=".xlsx"]:before,
+		&[href$=".XLSX"]:before{content: @icon-xls; color: @color-xls} 
+		&[href$=".jpg"]:before,
+		&[href$=".JPG"]:before,
+		&[href$=".bpm"]:before,
+		&[href$=".BPM"]:before,
+		&[href$=".jpeg"]:before,
+		&[href$=".JPEG"]:before,
+		&[href$=".tif"]:before,
+		&[href$=".TIF"]:before,
+		&[href$=".png"]:before,
+		&[href$=".PNG"]:before,
+		&[href$=".gif"]:before,
+		&[href$=".GIF"]:before{content: @icon-jpg; color: @color-jpg} 
+		&[href$=".zip"]:before,
+		&[href$=".ZIP"]:before,
+		&[href$=".rar"]:before,
+		&[href$=".RAR"]:before,
+		&[href$=".gzip"]:before,
+		&[href$=".GZIP"]:before{content: @icon-zip; color: @color-zip} 
+		&[href$=".txt"]:before, 
+		&[href$=".TXT"]:before{content: @icon-txt; color: @color-txt} 
+	}
+}
+.docs-item__inner{
+	width: 100%;
+}

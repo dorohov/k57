@@ -1,0 +1,236 @@
+ //
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	&.fade .modal-dialog {
+		.translate(0, 0%);
+		.transition-transform(~"0.5s");
+	}
+	&.in .modal-dialog { .translate(0, 10%) }
+	@media @media-size-xs{
+		&.fade .modal-dialog {.translate(-100%, 0);}
+		&.in .modal-dialog { .translate(0, 0%) }
+	}
+	@media @media-size-lg {
+		&.in .modal-dialog { .translate(0, 4%) }
+	}
+	@media @media-size-xxl{
+		&.in .modal-dialog { .translate(0, 30%) }
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 0px;}  
+	@media @media-size-sm 	{width: 620px;	margin: 10px auto;}  
+	@media @media-screen 	{width: 620px;	margin: 0px auto;}  
+	//background: url(/img/maket/1920/form2.jpg) no-repeat 0 0;
+}
+.modal-content {
+	position: relative;
+	outline: 0;
+}
+.modal-body {
+	position: relative;
+	padding: 40px 30px 30px;
+	background: @white;
+	color: @black;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	//opacity: 0.7;
+	font-family: @din;
+	font-size: @b-fs - 3px; //15px;
+	line-height: @b-lh - 6px; //22px;
+	@media @media-size-xs{padding: 25px 25px 10px;}	
+	@media @media-size-sml{padding: 30px 30px 20px;}	
+	
+}
+
+// Title text within header
+.modal-heading{}
+.modal-title {
+	font-family: @din-bold;
+	text-transform: uppercase;
+	@media @media-screen	{font-size: @b-fs + 24px; line-height: @b-lh + 18px;} 	// 42/46
+	@media @media-size-xs	{font-size: @b-fs + 8px; line-height: @b-lh + 4px;} 	// 26/30
+	@media @media-size-sml	{font-size: @b-fs + 16px; line-height: @b-lh + 12px;} 	// 34/38
+}
+.modal-title-small {
+	text-transform: uppercase;
+	@media @media-notsmart	{font-size: @b-fs - 1px; line-height: @b-lh - 8px;} 	// 17/20
+}
+.modal-btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    //transform: translateY(-50%);
+	@media @media-size-xs 	{
+		right: 50%; 
+		transform: translateX(50%);
+	}
+}
+.modal-note{
+	text-align: center;
+	margin-bottom: 30px;
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+//custom styles
+._msr__block{
+	width: 100%;
+	@media @media-size-xs{padding-top: 30px}
+}
+._msr__form-btn{
+	@media @media-size-xs{text-align: center;}
+}
+
+
+._msp__dialog{ 
+	@media @media-screen 	{width: 800px;	margin: 0px auto;} 
+}
+._msp__body{
+	padding: 60px 20px 30px;
+}
+._msp__block{
+	width: 100%;
+	.content-inner{
+		@media @media-size-sm{padding-right: 30px;}
+	}
+}
+._msp__row{}
+._msp__cols-left{
+	width: 100%;
+	@media @media-size-xs{margin-bottom: 25px;}
+	@media @media-notsmart{
+		width: 40%;
+	}
+}
+._msp__cols-right{
+	width: 100%;
+	@media @media-notsmart{
+		width: 60%;
+		height: 360px;		
+	}
+}
+
+.partners-preview{
+	@media @media-size-xs{max-width: 280px; margin: 0 auto}
+}
+.partners-link{
+	text-align: center;
+}
+.partners-heading{
+	font-family: @din-bold;
+	font-size: @b-fs - 2px;
+	line-height: @b-lh - 8px;
+	margin-bottom: 20px;
+}
+/*
+.modal-block{
+	width: 100%;
+} 
+._msr__dialog{
+   	@media @media-device{width: 100%}
+	@media @media-size-lg{width: 63%;}
+	@media @media-size-xl{width: 60%;}
+	@media @media-size-xxl{ width: 50%;}
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0;	
+}
+._msr__content{
+	background: @b-gradient-invers;
+	@media @media-notsmart{height: 100%;}
+	//background: url(/img/maket/1920/modal.jpg) no-repeat 0 -75px;
+}
+._msr__note{
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+._msr__body{
+	//opacity: 0.7;
+	position: relative;	
+	background: none;
+	@media @media-size-xxl{padding: 40px 80px;}
+}
+._msr__block{
+	position: relative;	
+	@media @media-size-xs{
+		margin-top: 40px;
+		padding-top: 40px;
+	}
+	@media @media-size-sm{
+		padding-top: 60px;
+	}
+	&:before {
+		content: "отправить заказ"; 
+		position: absolute; 
+		text-align: center;
+		z-index: 1; 
+		text-transform: uppercase; 
+		font-family: BanderaProHeavy; 
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		letter-spacing: .2vw;
+		@media @media-device{
+			font-size: 7.7vw;
+			line-height: 7.7vw;
+			color: rgba(255, 255, 255, 0.1); 
+		}
+		@media @media-screen{
+			font-size: 3.7vw;
+			line-height: 3.7vw;
+			transform: translate(0%,-100%);
+			color: rgba(255, 255, 255, 0.05); 
+		}
+	}
+}*/

@@ -1,0 +1,47 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+	.container-fixed();
+	width: 100%;
+	@media @media-screen{width: 1210px}
+	@media @media-size-lg{width: 810px}
+	@media @media-size-xl1{width: 870px}
+	@media @media-size-xl2{width: 1050px}
+}
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+	.container-fixed();	
+	padding-left: 40px;
+	padding-right: 40px; 
+	@media @media-size-xs{
+		padding-left: 20px;
+		padding-right: 20px; 
+	}
+	@media @media-size-sml{
+		padding-left: 25px;
+		padding-right: 25px; 
+	}
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+	.make-row();
+}
+.cols {
+	.make-cols();
+}

@@ -1,0 +1,166 @@
+body {
+	font-family: @b-ff;	//proxima-nova-light
+	font-size: @b-fs; 																//16px
+	line-height: @b-lh; 															// 24px
+	@media @media-size-xs 	{font-size: @b-fs - 2px; line-height: @b-lh - 4px;} 	// 14/22
+}
+i, em{font-style: @din-ital;}
+b, strong{font-family: @din-bold}
+h1{
+	@media @media-screen	{font-size: @b-fs + 30px; line-height: @b-lh + 36px;} 	// 48/64
+	@media @media-size-xs	{font-size: @b-fs + 12px; line-height: @b-lh + 10px;} 	// 30/38
+	@media @media-size-sml	{font-size: @b-fs + 22px; line-height: @b-lh + 20px;} 	// 40/48
+}
+h2{
+	@media @media-screen	{font-size: @b-fs + 20px; line-height: @b-lh + 16px;} 	// 36/40
+	@media @media-size-xs	{font-size: @b-fs + 12px; line-height: @b-lh + 12px;} 	// 28/36
+	@media @media-size-sml	{font-size: @b-fs + 16px; line-height: @b-lh + 16px;} 	// 32/40
+}
+h3{
+	@media @media-screen	{font-size: @b-fs + 14px; line-height: @b-lh + 14px;} 	// 30/38
+	@media @media-size-xs	{font-size: @b-fs + 6px; line-height: @b-lh + 6px;} 	// 22/30
+	@media @media-size-sml	{font-size: @b-fs + 10px; line-height: @b-lh + 10px;} 	// 26/34
+}
+h4{
+	@media @media-screen	{font-size: @b-fs + 8px; line-height: @b-lh + 6px;} 	// 26/34
+	@media @media-size-xs	{font-size: @b-fs; line-height: @b-lh - 2px;} 				// 16/22
+	@media @media-size-sml	{font-size: @b-fs + 4px; line-height: @b-lh + 2px;} 	// 20/26
+	@media @media-size-xl	{font-size: @b-fs + 6px; line-height: @b-lh + 6px;} 	// 22/30
+}
+h5{
+	@media @media-notsmart	{font-size: @b-fs; line-height: @b-lh;} 				// 16/24
+	@media @media-size-xs	{font-size: @b-fs - 2px; line-height: @b-lh - 2px;} 	// 14/22
+}
+h6{
+	@media @media-notsmart	{font-size: @b-fs - 2px; line-height: @b-lh - 2px;} 	// 14/22
+	@media @media-size-xs	{font-size: @b-fs - 3px; line-height: @b-lh - 3px;} 	// 13/21
+}
+h1, h2, h3, h4, h5, h6{
+	//font-family: @bender; 
+	margin: 0 0 10px;
+	font-weight: normal;
+}
+h1{font-family: @din-black;}
+h2{font-family: @din-bold;}
+h3,h4,h5,h6{
+	font-family: @din-light;
+}
+.heading-site{
+	color: @azure;
+	font-family: @din-black; 
+	margin-bottom: 25px;
+	&.__index{
+		color: @black;
+		span{color: @azure;}
+		@media @media-size-xs{
+			font-size: @b-fs + 12px; 	//30
+			line-height: @b-lh + 6px;	//34
+		}
+		@media @media-size-sm{
+			font-size: @b-fs + 22px; 	//40
+			line-height: @b-lh + 16px;	//44
+		}
+		@media @media-size-xl{
+			font-size: @b-fs + 32px; 	//50
+			line-height: @b-lh + 26px;	//54
+		}
+		@media @media-size-xxl{
+			font-size: @b-fs + 42px; 	//60
+			line-height: @b-lh + 36px;	//64
+		}
+	}
+}
+.heading-block{
+	display: flex;
+	margin-left: -15px;
+	margin-right: -15px;
+	justify-content: space-between;    
+	align-items: flex-end;
+	margin-bottom: 45px;
+	@media @media-size-xs{margin-bottom: 25px;}
+	@media @media-device{flex-wrap: wrap;}
+	> *{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.heading-site{
+		margin-bottom: 0;
+	}
+}
+.heading-site-block{
+	align-items: center;
+	margin-bottom: 50px;
+	@media @media-size-xs{margin-bottom: 25px;}
+	@media @media-size-sml{margin-bottom: 25px;}
+	@media @media-size-xl{margin-bottom: 30px;}
+	.heading-site{
+		margin-bottom: 0;
+		a{text-decoration: none;}
+	}
+	a{
+		text-decoration: underline;
+		@media @media-screen	{font-size: @b-fs - 1px; line-height: @b-lh - 1px;} 	// 15/23
+		//font-family: @proxima-sbold;
+	}
+}
+.text-block{
+	div, p, ol, ul{margin-bottom: 10px;}
+	div + h2,
+	p + h2,
+	ul + h2,
+	ol + h2,
+	blockquote + h2,
+	table + h2,
+	div + h3,
+	p + h3,
+	ul + h3,
+	ol + h3,
+	blockquote + h3,
+	table + h3,
+	div + h4,
+	p + h4,
+	ul + h4,
+	ol + h4,
+	blockquote + h4,
+	table + h4,
+	div + h5,
+	p + h5,
+	ul + h5,
+	ol + h5,
+	blockquote + h5,
+	table + h5{
+		padding-top: 20px;
+	}
+
+	h4{margin-bottom: 30px;}
+	* + ol, * + ul{padding-top: 10px;}
+	> ._tb__img{
+		padding-top: 45px;
+		padding-bottom: 20px;
+	}
+	.table-responsive{
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+	.table{ 
+		thead{
+			td, th{
+				background: @cyan-dark;
+				text-align: center;
+				color: @white;
+				//font-family: @proxima-bold;
+				padding: 18px 10px;
+			}
+		}
+		tbody{
+			td, th{
+				padding: 23px 10px;
+			}
+		}
+	}
+}
+blockquote {
+	border-left: 2px solid @red;
+	font-style: italic;
+	padding: 0 0 0 40px;
+}

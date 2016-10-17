@@ -1,0 +1,193 @@
+.news-item{
+	&.news-block__item{
+		@media @media-size-xs{margin-bottom: 25px;}
+		.news-item__heading{
+			font-size: @b-fs - 3px; //15px
+			line-height: @b-lh - 6px; //22px;
+			@media @media-size-lg{
+				font-size: @b-fs - 4px; //14px
+				line-height: @b-lh - 10px; //18px;
+			}
+			a{
+				color: @black;
+				&:hover{
+					color: @azure;
+				}
+			}
+		}
+	}
+	&.news-list__item{
+		margin-bottom: 35px;	
+		@media @media-size-xxl{margin-bottom: 70px;}		
+		.news-item__heading{
+			font-family: @din-bold;
+			a{
+				border-bottom: 1px solid fadeout(@azure, 50%);
+				&:hover{
+					border-bottom-color: fadeout(@azure, 100%);
+				}
+			}
+		}
+	}
+}
+.news-item__time{
+	font-size: @b-fs - 6px; //14px
+	line-height: @b-lh - 12px; //20px;
+	color: @white-al;
+	@media @media-size-xxl{
+		margin-bottom: 5px;
+		font-size: @b-fs - 4px; //14px
+		line-height: @b-lh - 8px; //20px;
+	}
+}
+.news-item__heading{	
+	font-size: @b-fs - 2px; //16px
+	line-height: @b-lh - 6px; //22px;
+	a{
+		transition: @transition-site;
+	}
+}
+.news-item__note{
+	font-family: @din;
+	font-size: @b-fs - 4px; //14px
+	line-height: @b-lh - 8px; //20px;
+		
+	@media @media-size-xxl{
+		font-size: @b-fs - 2px; //16px
+		line-height: @b-lh - 4px; //24px;
+	}
+}
+.news-item__preview{
+	a{
+		display: block;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media @media-size-xs-p{
+			height: 200px!important;
+		}
+	}
+	@media @media-size-xs{
+		margin-bottom: 15px;
+		//img{margin: 0 auto;}
+	}
+}
+
+//news-block
+.news-block{
+	@media @media-size-xs{padding-bottom: 0px;}
+	@media @media-size-sm{padding-bottom: 35px;}
+	@media @media-screen{padding-top: 25px;}
+	@media @media-size-lg{padding-bottom: 35px}
+	@media @media-size-xl{padding-bottom: 25px}
+	@media @media-size-xxl{padding-bottom: 50px}
+	&.index{
+		@media @media-size-xxl{padding-bottom: 95px}
+	}
+}
+.news-block__row{
+	@media @media-device{flex-wrap: wrap;}
+	@media @media-screen{align-items: center;}
+}
+.news-block__item-cols{
+	@media @media-size-xs{width: 100%;}
+	width: 33.3333%;
+}
+.news-block__heading-cols{
+	width: 24%;
+	@media @media-device{width: 100%}
+}
+.news-block__list-cols{
+	width: 76%;
+	@media @media-device{width: 100%}
+}
+.news-block__heading{
+	position: relative;
+	margin: 0;
+	@media @media-device{margin-bottom: 25px;}
+	&:after{
+		@media @media-device{display: none}
+		font-family: @icon;
+		content: @icon-ar-next;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: fadeout(#868686, 50%);
+		right: 30px;
+	    font-size: 40px;
+	    line-height: 40px;
+	    @media @media-size-lg{display: none}
+	    @media @media-size-xl1{
+			right: -10px;
+			font-size: 25px;
+			line-height: 25px;
+	    }
+	}
+	a{
+		color: @blue-darken;
+		font-size: @b-fs + 8px; //26px
+		line-height: @b-lh + 6px; //34px;
+		@media @media-size-lg{
+			font-size: @b-fs + 4px; //22px
+			line-height: @b-lh + 2px; //30px;
+		}
+	}
+}
+.news-block__list{
+	position: relative;
+	@media @media-screen{
+		padding-right: 10px;
+	}
+}
+.news-block__link{
+	@media @media-device{display: none}
+	position: absolute;
+	top: 50%;
+	right: -25px;
+	transform: translateY(-50%);
+	z-index: 5;
+	&:before{
+		font-family: @icon;
+		content: @icon-arrow-next;
+		display: block;
+		color: #787878;
+		border: 1px solid #787878;
+		width: 25px;
+		line-height: 23px;
+		font-size: 12px;
+		text-align: center;
+		border-radius: 50%;
+	}
+}
+
+//news-list
+.news-list{
+	@media @media-size-sm{padding-top: 15px;}		
+	@media @media-size-xl{padding-top: 15px;}		
+	@media @media-size-xxl{padding-top: 35px;}
+}
+.news-list__row{
+	flex-wrap: wrap;
+}
+.news-list__cols{
+	width: 50%;
+	@media @media-size-xs{width: 100%;} 
+	@media @media-size-sm-p{width: 100%;} 
+	@media @media-size-lg{width: 100%;} 
+	@media @media-size-xl1{width: 100%;}
+}
+.news-item__row{}
+.news-item__preview-cols{
+	width: 30%;
+	@media @media-size-xs-p{width: 100%;} 
+	@media @media-size-sm-p{width: 23%;}
+	@media @media-size-lg{width: 23%;}
+	@media @media-size-xl1{width: 21%;}
+}
+.news-item__note-cols{
+	width: 70%;
+	@media @media-size-xs-p{width: 100%;} 
+	@media @media-size-sm-p{width: 77%;}
+	@media @media-size-lg{width: 77%;}
+	@media @media-size-xl1{width: 79%;}
+}

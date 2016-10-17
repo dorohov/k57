@@ -1,0 +1,55 @@
+@din: 				dinpro-regular;
+@din-ital: 			dinpro-italic;
+@din-light: 		dinpro-light;
+@din-med: 			dinpro-medium;
+@din-bold: 			dinpro-bold;
+@din-black: 		dinpro-black;
+
+@icon: 				Flaticon;
+.include-custom-font(@family: @din, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{family}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+/*din*/
+.include-custom-font(@family: @din, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @din-light, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @din-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @din-black, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @din-med, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @din-ital, 	@weight: normal, @style: normal);
+/*end's din*/
+.include-custom-icon(@family: @icon, 			@weight: normal, @style: normal);
+
+@icon-ar-down: 		"\f100";
+@icon-ar-next: 		"\f101";
+@icon-ar-prev: 		"\f102";
+@icon-ar-up: 		"\f103";
+@icon-arrow-down: 	"\f104";
+@icon-arrow-next: 	"\f105";
+@icon-arrow-prev: 	"\f106";
+@icon-arrow-up: 	"\f107";
+@icon-circle: 		"\f108";
+@icon-close: 		"\f109";
+@icon-connection: 	"\f10a";
+@icon-doc: 			"\f10b";
+@icon-jpg: 			"\f10c";
+@icon-mailto: 		"\f10d";
+@icon-pdf: 			"\f10e";
+@icon-ppt: 			"\f10f";
+@icon-technology: 	"\f110";
+@icon-txt: 			"\f111";
+@icon-xls: 			"\f112";
+@icon-zip: 			"\f113";
