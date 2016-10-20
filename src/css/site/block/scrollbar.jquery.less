@@ -70,7 +70,7 @@ y-axis
 
 	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
 		position: absolute;
-		width: 30px;
+		width: 5px;
 		height: auto;
 		left: auto;
 		top: 0;
@@ -108,7 +108,7 @@ y-axis
 	.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
 
 	.mCSB_scrollTools .mCSB_draggerRail{
-		width: 2px;
+		width: 5px;
 		height: 100%;
 		margin: 0 auto;
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
@@ -123,7 +123,7 @@ y-axis
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
 		position: relative;
-		width: 4px;
+		width: 5px;
 		height: 100%;
 		margin: 0 auto;
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
@@ -326,7 +326,7 @@ yx-axis
 @sc-bar: 			fadeout(@blue-purple, 50%);
 @sc-bar-hover: 		fadeout(@blue-purple, 10%);
 @sc-bar-active: 	fadeout(@blue-purple, 0%);
-@sc-bar-size: 		10px;
+@sc-bar-size: 		5px;
 @sc-balls-size: 	5px;
 @sc-balls-visible: 	'';
 
@@ -358,8 +358,8 @@ yx-axis
 					color: @rail;
 					font-family: @icon;
 				}
-				&:before{top: -(@balls-size); content: @icon-ar-up}
-				&:after{bottom: -(@balls-size); content: @icon-ar-down}
+				//&:before{top: -(@balls-size); content: @icon-ar-up}
+				//&:after{bottom: -(@balls-size); content: @icon-ar-down}
 			}
 			.mCSB_draggerRail{background-color: @rail;}
 			.mCSB_dragger{
