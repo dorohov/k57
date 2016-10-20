@@ -87,26 +87,24 @@
 /* No Js */
 .no-js .owl-carousel {display: block;}
 /*custom controls*/
-._picp__owl{
+.owl-slider{
 	.owl-nav{
 		div{
 			position: absolute;
 			top: 50%;    
 			transition: @transition-site;
-			transform: translateY(-50%) rotate(-90deg);
+			transform: translateY(-50%);
 			&:before{
 				font-family: @icon;
 				display: block;
-				color: @aquamarine;
-				background: @white;
+				color: @white;
+				background: fadeout(@black, 50%);
 				text-align: center;
-				border-radius: 50%;
 				font-size: 30px;
 				width: 70px;
 				line-height: 70px;
 				transition: @transition-site;
 				//opacity: 0.5;
-				box-shadow: 1px 1px 1px fadeout(@aquamarine, 50%);
 				@media @media-size-xs{
 					width: 36px;
 					line-height: 32px;
@@ -117,26 +115,27 @@
 			&:hover{
 				&:before{
 					//opacity: 1;
-					background: @aquamarine;
+					background: @blue-darken;
 					color: @white;
-					box-shadow: 1px 1px 1px fadeout(@aquamarine, 100%);
 				}
 			}
 		}
 		.owl-prev{
-			left: 10px;
+			left: 0px;
 			&:before{
-				//content: @icon-up;
+				border-radius: 0 10px 10px 0;
+				content: @icon-ar-prev;
 			}
 		}
 		.owl-next{
-			right: 10px;
+			right: 0px;
 			&:before{
-				//content: @icon-down;
+				border-radius: 10px 0 0 10px;
+				content: @icon-ar-next;
 			}
 		}
 	}
-	.owl-dots {
+	/*.owl-dots {
 		position: absolute;
 		bottom: 0px;
 		display: flex;
@@ -155,5 +154,5 @@
 		&.active{
 			//background: fadeout(@aquamarine-mod, 0%);
 		}
-	}
+	}*/
 }

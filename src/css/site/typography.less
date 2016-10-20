@@ -134,10 +134,26 @@ h3,h4,h5,h6{
 
 	h4{margin-bottom: 30px;}
 	* + ol, * + ul{padding-top: 10px;}
-	> ._tb__img{
-		padding-top: 45px;
-		padding-bottom: 20px;
-	}
+	._tb__img{
+		display: block;
+		margin: 20px 20px 20px 0;
+		float: left;
+		@media @media-size-xs{
+			margin: 0 0 15px 0;
+			float: none;
+			img{margin: 0 auto}
+		}
+		&.right{
+			margin: 20px 0px 20px 20px;
+			float: right;
+			@media @media-size-xs{
+				margin: 0 0 15px 0;
+				float: none;
+				img{margin: 0 auto}
+			}
+		}
+		
+	} 
 	.table-responsive{
 		padding-top: 20px;
 		padding-bottom: 10px;
@@ -145,7 +161,7 @@ h3,h4,h5,h6{
 	.table{ 
 		thead{
 			td, th{
-				background: @cyan-dark;
+				background: @blue-darken;
 				text-align: center;
 				color: @white;
 				//font-family: @proxima-bold;

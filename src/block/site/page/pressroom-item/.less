@@ -1,7 +1,22 @@
 ._nipc__slider{
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+	padding: 20px 0;
+	@media @media-screen{
+	    display: flex;
+	    justify-content: center;
+	}
+}
+.owl-slider{
+	@media @media-device{
+		* {margin-bottom: 0!important;}
+		ul{
+			margin: 0!important;
+			li{
+				list-style: none;
+				margin: 0;
+				padding: 0;				
+			}
+		}
+	}
 }
 #ninja-slider {
     width:800px;
@@ -193,7 +208,7 @@
     margin: 0;
     position:relative;
     user-select:none;
-    @media @media-size-xs{display: none;}
+    @media @media-device{display: none;}
     @media @media-size-sm{height: 280px;}
     @media @media-size-lg{height: 290px;}
     @media @media-size-xl1{height: 320px;}

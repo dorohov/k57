@@ -1,12 +1,11 @@
 @site-name : "site";
 
 /* Подключение fecss */
+@import "./../../../../vendor/azbn.ru/fecss/mixins.less";
+@import "./../../../../vendor/azbn.ru/fecss/reset.less";
+@import "./../../../../vendor/azbn.ru/fecss/var.less";
 
-@import "./../../../vendor/azbn.ru/fecss/mixins.less";
-@import "./../../../vendor/azbn.ru/fecss/reset.less";
-@import "./../../../vendor/azbn.ru/fecss/var.less";
-
-@import "./../../../vendor/azbn.ru/fecss/main.less";
+@import "./../../../../vendor/azbn.ru/fecss/main.less";
 /* Подключение bootstrap */
 @import "./bootstrap/bootstrap.less";
 
@@ -24,9 +23,6 @@
 @import "@{site-name}/block/retina.less";
 @import "@{site-name}/block/scrollbar.jquery.less";
 @import "@{site-name}/block/bg.less";
-//@import "@{site-name}/block/animation.less";
-//@import "@{site-name}/block/news.less";
-//@import "@{site-name}/block/element.less";
 
-@import "@{site-name}/gulp-block.less";
+@import "../_/concat.block.less";
 @import "@{site-name}/maket.less";
