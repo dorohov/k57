@@ -152,8 +152,21 @@ h3,h4,h5,h6{
 				img{margin: 0 auto}
 			}
 		}
-		
 	} 
+	._tb__gallery{
+		flex-wrap: wrap;
+		.cols{
+			width: 25%;	
+			margin-bottom: 25px;		
+			@media @media-size-xs-p{width: 100%;}
+			@media @media-size-xs-l{width: 50%;}
+		}
+		._tb__img{
+			float: none;
+			margin: 0;
+		}
+
+	}
 	.table-responsive{
 		padding-top: 20px;
 		padding-bottom: 10px;
