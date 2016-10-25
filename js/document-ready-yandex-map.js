@@ -26,12 +26,12 @@ $(function() {
 		});
 		var glonass_office = new ymaps.Placemark([52.987353, 36.076387], {
 			hintContent: '«Кластер ГЛОНАСС»'
-		}, {
+		}/*, {
 			iconLayout: 'default#image',
 			iconImageHref: '/img/default/icon-map-glonass.png',
 			iconImageSize: [94, 104],
 			iconImageOffset: [-47, -104]
-		});
+		}*/);
 		
 		map_glonass
 			.geoObjects
@@ -57,12 +57,12 @@ $(function() {
 		});
 		var region_office = new ymaps.Placemark([52.987353, 36.076387], {
 			hintContent: 'НП «ГЛОНАСС регионам»'
-		}, {
+		}/*, {
 			iconLayout: 'default#image',
 			iconImageHref: '/img/default/icon-map-region.png',
 			iconImageSize: [94, 104],
 			iconImageOffset: [-47, -104]
-		});
+		}*/);
 		
 		map_region
 			.geoObjects
@@ -90,12 +90,12 @@ $(function() {
 		});
 		var ccd_office = new ymaps.Placemark([52.965745, 36.063765], {
 			hintContent: 'Центр кластерного развития Орловской области'
-		}, {
+		}/*, {
 			iconLayout: 'default#image',
 			iconImageHref: '/img/default/icon-map-ccd.png',
 			iconImageSize: [94, 104],
 			iconImageOffset: [-47, -104]
-		});
+		}*/);
 		
 		map_ccd
 			.geoObjects
