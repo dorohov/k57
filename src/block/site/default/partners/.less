@@ -59,11 +59,22 @@
 	}
 	img{
 		margin: 0 auto;
+		-webkit-filter: grayscale(95%);
+		-moz-filter: grayscale(95%);
+		-ms-filter: grayscale(95%);
+		-o-filter: grayscale(95%);
+		filter: grayscale(95%);
 		@media @media-size-lg{height: 90px;}
 		@media @media-size-lg2{height: 110px;}
 		@media @media-size-xl2{height: 155px;}
+		&:hover{
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			-ms-filter: grayscale(0%);
+			-o-filter: grayscale(0%);
+			filter: grayscale(0%);
+		}
 	}
-
 }
 .partners-item__inner{
 	//display: flex;
