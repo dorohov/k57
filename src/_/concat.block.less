@@ -267,7 +267,8 @@ textarea._frms__form-control{
 	@media @media-size-xs{padding: 25px 25px 10px;}	
 	@media @media-size-sml{padding: 30px 30px 20px;}	
 	& .text-block {
-		font-family: @georgia;
+		//font-family: @georgia;
+		//font-family: @georgia;
 	}
 }
 
@@ -578,15 +579,16 @@ textarea._frms__form-control{
 			transition: @transition-site;
 			background: none;
 
-			font-family: @din;
+			//font-family: @din;
+			font-family: @open;
 			color: @white;
 			@media @media-device{
 				display: inline-block;				
 		   		padding: 8px 20px 8px 40px;
 			}
 			@media @media-screen{
-				font-size: @b-fs - 2px; //16px
-				line-height: @b-lh - 4px; //24px
+				font-size: @b-fs - 3px; //16px
+				line-height: @b-lh - 5px; //24px
 		   		padding: 5px 20px 5px 50px;
 			}
 			@media @media-size-lg{
@@ -1143,7 +1145,8 @@ textarea._frms__form-control{
 			line-height: @b-lh - 6px; //22px
 			text-decoration: none;
 			display: block;
-			font-family: @din;
+			//font-family: @din;
+			font-family: @open;
 			&:before{
 				font-family: @icon;
 				display: block;
@@ -1187,8 +1190,8 @@ textarea._frms__form-control{
 	&.news-block__item{
 		@media @media-size-xs{margin-bottom: 25px;}
 		.news-item__heading{
-			font-size: @b-fs - 3px; //15px
-			line-height: @b-lh - 6px; //22px;
+			font-size: @b-fs - 2px; //15px
+			line-height: @b-lh - 5px; //22px;
 			@media @media-size-lg{
 				font-size: @b-fs - 4px; //14px
 				line-height: @b-lh - 10px; //18px;
@@ -1228,16 +1231,18 @@ textarea._frms__form-control{
 .news-item__heading{	
 	font-size: @b-fs - 2px; //16px
 	line-height: @b-lh - 6px; //22px;
-	font-family: @georgia;
+	//font-family: @georgia;
+	font-family: @open;
 	a{
 		transition: @transition-site;
 	}
 }
 .news-item__note{
-	font-family: @din;
+	//font-family: @din;
+	//font-family: @georgia;
+	font-family: @open;
 	font-size: @b-fs - 4px; //14px
 	line-height: @b-lh - 8px; //20px;
-	font-family: @georgia;
 		
 	@media @media-size-xxl{
 		font-size: @b-fs - 2px; //16px
@@ -1291,6 +1296,7 @@ textarea._frms__form-control{
 .news-block__heading{
 	position: relative;
 	margin: 0;
+	font-family: @open;
 	@media @media-device{margin-bottom: 25px;}
 	&:after{
 		@media @media-device{display: none}
